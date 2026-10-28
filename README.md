@@ -36,6 +36,18 @@ Pour récupérer ce que le formateur ajoute :
 git -C ~/projets/formation-nodejs pull
 ```
 
+On ne modifie pas les fichiers de `demos/` : sinon `git pull` refuse de les mettre à jour. Pour les remettre dans leur état d'origine :
+
+```bash
+git -C ~/projets/formation-nodejs restore demos
+```
+
+Le matin du jour 2, une seule fois, on installe ce dont les exemples du jour 2 ont besoin (Express, EJS, Multer, pg, Sequelize, async, Mocha) :
+
+```bash
+cd ~/projets/formation-nodejs/demos && npm install
+```
+
 ## Prérequis
 
 - [Node.js](https://nodejs.org/) 22 ou 24 (version LTS, installeur Windows).

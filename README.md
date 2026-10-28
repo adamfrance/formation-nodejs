@@ -7,6 +7,7 @@ Réf. NJS-SPE · 2 jours · fil rouge **TaskFlow** (API de gestion de tâches, a
 | Dossier | Contenu | Quand |
 |---|---|---|
 | `depart/jour1`, `depart/jour2` | Les fichiers de départ à ne pas retaper (données, petits scripts fournis, CSS) | Dès le début |
+| `demos/jour1` | Les petits programmes de démonstration du jour 1 : `cd ~/projets/formation-nodejs/demos/jour1`, puis par exemple `node scripts/experiences/appelez-moi.js` | Dès le début |
 | `supports/` | Le support de chaque journée (`formation-nodejs-jour1-apprenant.html`, puis `formation-nodejs-jour2-apprenant.html` et `formation-nodejs-support-complet-apprenant.html`, les deux jours + mémento) et les énoncés des exercices (`enonces/`) | En fin de chaque journée |
 | `jour1/` | Le code de fin du jour 1 (corrigés) | Le soir du jour 1 |
 | `jour2/` | Le code de fin du jour 2 (corrigés) | Le soir du jour 2 |

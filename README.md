@@ -2,16 +2,22 @@
 
 Réf. NJS-SPE · 2 jours · fil rouge **TaskFlow** (API de gestion de tâches, application web, tests).
 
-## Ce que contient ce dépôt
+## Deux dossiers
+
+```text
+~/projets/formation-nodejs/
+├── demos/      les exemples : on les ouvre et on les lance pendant les exemples guidés
+└── taskflow/   votre application TaskFlow : les exercices se font ici
+```
+
+`demos/` vient de ce dépôt. `taskflow/` est votre projet : vous le créez au TP 1.1, dans ce dossier ; Git l'ignore ici (il a son propre dépôt Git).
+
+Le soir s'ajoutent :
 
 | Dossier | Contenu | Quand |
 |---|---|---|
-| `depart/jour1`, `depart/jour2` | Les fichiers de départ à ne pas retaper (données, petits scripts fournis, CSS) | Dès le début |
-| `demos/jour1` | Les petits programmes de démonstration du jour 1 : `cd ~/projets/formation-nodejs/demos/jour1`, puis par exemple `node scripts/experiences/appelez-moi.js` | Dès le début |
-| `supports/` | Le support de chaque journée (`formation-nodejs-jour1-apprenant.html`, puis `formation-nodejs-jour2-apprenant.html` et `formation-nodejs-support-complet-apprenant.html`, les deux jours + mémento) et les énoncés des exercices (`enonces/`) | En fin de chaque journée |
-| `jour1/` | Le code de fin du jour 1 (corrigés) | Le soir du jour 1 |
-| `jour2/` | Le code de fin du jour 2 (corrigés) | Le soir du jour 2 |
-| `base-tp-2.6/` | Le projet au début du TP 2.6, pour qui n'a pas terminé la journée | Le jour 2 vers 16 h 25, si besoin |
+| `supports/` | Le support de la journée (`formation-nodejs-jour1-apprenant.html`, puis `formation-nodejs-jour2-apprenant.html` et `formation-nodejs-support-complet-apprenant.html`) et les énoncés des exercices (`enonces/`) | En fin de chaque journée |
+| `corriges/jour1/`, `corriges/jour2/` | TaskFlow à la fin de chaque journée | Le soir de chaque journée |
 
 ## Utilisation
 
@@ -24,9 +30,7 @@ git clone https://github.com/adamfrance/formation-nodejs.git
 
 Pendant la journée, le formateur colle dans le chat de la visio le code à copier et les énoncés des exercices. Le support de la journée (tout le code, avec un bouton **Copier** sur chaque bloc) est ajouté à ce dépôt en fin de journée : après `git pull`, ouvrez-le dans votre navigateur depuis votre copie locale (double-clic sur le fichier), car GitHub n'affiche pas ces pages HTML en ligne.
 
-On ne travaille pas dans ce dossier : vos projets se créent à côté, dans `~/projets/jour1/` et `~/projets/jour2/` (le cours indique chaque commande).
-
-Pour récupérer ce que le formateur ajoute (support et code de fin de journée, corrections) :
+Pour récupérer ce que le formateur ajoute :
 
 ```bash
 git -C ~/projets/formation-nodejs pull

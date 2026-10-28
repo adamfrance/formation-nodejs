@@ -13,7 +13,7 @@ function start(port = 4100) {
       res.writeHead(200, { 'Content-Type': 'application/json' });
       return res.end(JSON.stringify(todos));
     }
-    if (req.url === '/slow') return;            // ne répond jamais (test du timeout)
+    if (req.url === '/slow') return;
     res.writeHead(404).end();
   });
   return new Promise((resolve) => server.listen(port, () => resolve(server)));

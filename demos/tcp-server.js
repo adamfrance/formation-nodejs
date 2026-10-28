@@ -5,7 +5,7 @@ const TaskService = require('./task-service');
 
 const PORT = Number(process.env.TCP_PORT ?? 4000);
 const service = new TaskService();
-service.on('error', () => {});                      // erreurs gérées dans handleLine
+service.on('error', () => {});
 
 // Bonus : chaque création est signalée en UDP au collecteur de métriques
 const udp = dgram.createSocket('udp4');
@@ -36,7 +36,6 @@ function handleLine(line, socket) {
 const server = net.createServer((socket) => {
   socket.setEncoding('utf8');
   socket.on('error', (err) => console.error('Socket :', err.code));
-  // readline reconstitue les lignes même si TCP découpe les paquets
   readline.createInterface({ input: socket }).on('line', (line) => handleLine(line, socket));
 });
 

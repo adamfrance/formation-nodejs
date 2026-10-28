@@ -1,5 +1,5 @@
 // Le routeur seul : quelle route correspond à quelle requête ?
-const Router = require('../../src/router');
+const Router = require('./router');
 
 const router = new Router();
 router.get('/api/tasks', () => 'liste');

@@ -1,0 +1,19 @@
+### Extension « REST Client » de VS Code : cliquer sur « Send Request »
+@base = http://localhost:3000/api
+
+GET {{base}}/tasks?done=false&page=1&limit=5
+
+###
+POST {{base}}/tasks
+Content-Type: application/json
+
+{ "title": "Écrire le compte rendu" }
+
+###
+PATCH {{base}}/tasks/1
+Content-Type: application/json
+
+{ "done": true }
+
+###
+DELETE {{base}}/tasks/1

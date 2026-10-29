@@ -5,3 +5,5 @@ coverage/
 *.log.gz
 .DS_Store
 /taskflow/
+/supports/
+/corrige-*/

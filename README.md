@@ -12,12 +12,12 @@ Réf. NJS-SPE · 2 jours · fil rouge **TaskFlow** (API de gestion de tâches, a
 
 `demos/` vient de ce dépôt. `taskflow/` est votre projet : vous le créez au TP 1.1, dans ce dossier ; Git l'ignore ici (il a son propre dépôt Git).
 
-Le soir s'ajoutent :
+Le reste arrive en fin de journée, sur des branches de ce dépôt :
 
-| Dossier | Contenu | Quand |
-|---|---|---|
-| `supports/` | Le support de la journée (`formation-nodejs-jour1-apprenant.html`, puis `formation-nodejs-jour2-apprenant.html` et `formation-nodejs-support-complet-apprenant.html`) et les énoncés des exercices (`enonces/`) | En fin de chaque journée |
-| `corriges/jour1/`, `corriges/jour2/` | TaskFlow à la fin de chaque journée | Le soir de chaque journée |
+| Branche | Contenu |
+|---|---|
+| `supports` | le support de chaque journée (`formation-nodejs-jour1-apprenant.html`, puis celui du jour 2 et le support complet) et les énoncés des exercices (`enonces/`) |
+| `jour-1`, `jour-2` | TaskFlow à la fin de chaque journée |
 
 ## Utilisation
 
@@ -28,7 +28,15 @@ mkdir -p ~/projets && cd ~/projets
 git clone https://github.com/adamfrance/formation-nodejs.git
 ```
 
-Pendant la journée, le formateur colle dans le chat de la visio le code à copier et les énoncés des exercices. Le support de la journée (tout le code, avec un bouton **Copier** sur chaque bloc) est ajouté à ce dépôt en fin de journée : après `git pull`, ouvrez-le dans votre navigateur depuis votre copie locale (double-clic sur le fichier), car GitHub n'affiche pas ces pages HTML en ligne.
+Pendant la journée, le formateur colle dans le chat de la visio le code à copier et les énoncés des exercices. Le support de la journée (tout le code, avec un bouton **Copier** sur chaque bloc) et TaskFlow à la fin de la journée arrivent en fin de journée, sur les branches `supports` et `jour-N`. Pour les récupérer à côté de `demos/` (Git les ignore ici) :
+
+```bash
+cd ~/projets/formation-nodejs
+git clone -b supports https://github.com/adamfrance/formation-nodejs.git supports
+git clone -b jour-1 https://github.com/adamfrance/formation-nodejs.git corrige-jour1
+```
+
+Le lendemain, `git -C ~/projets/formation-nodejs/supports pull` ajoute le support suivant. Ouvrez les pages HTML dans votre navigateur (double-clic sur le fichier) : GitHub ne les affiche pas en ligne.
 
 Pour récupérer ce que le formateur ajoute :
 

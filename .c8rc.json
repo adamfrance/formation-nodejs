@@ -1,0 +1,7 @@
+{
+  "include": ["src/**/*.js"],
+  "exclude": ["src/cluster.js", "src/scripts/**"],
+  "reporter": ["text", "html"],
+  "check-coverage": true,
+  "lines": 80
+}

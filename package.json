@@ -1,0 +1,32 @@
+{
+  "name": "taskflow",
+  "version": "1.0.0",
+  "description": "TaskFlow - API REST Express, Sequelize et PostgreSQL (fil rouge de la formation)",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch --env-file=.env src/server.js",
+    "start:cluster": "node src/cluster.js",
+    "seed": "node --env-file=.env src/scripts/seed.js",
+    "test": "mocha",
+    "test:cov": "c8 mocha"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.6",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "pg": "^8.23.1",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "c8": "^12.0.0",
+    "mocha": "^12.0.3",
+    "supertest": "^7.3.1"
+  }
+}

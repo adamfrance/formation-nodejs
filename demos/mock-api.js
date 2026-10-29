@@ -1,4 +1,4 @@
-// API de secours pour travailler sans accès Internet
+// Un faux serveur : /todos répond tout de suite, /slow ne répond jamais
 const http = require('node:http');
 
 const todos = [

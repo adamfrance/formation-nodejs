@@ -1,0 +1,8 @@
+<%- include('../partials/header', { title }) %>
+<h1><%= title %></h1>
+<% if (error) { %><p class="error" role="alert"><%= error %></p><% } %>
+<form method="post" action="/tasks">
+  <label>Titre <input name="title" value="<%= values.title ?? '' %>" required minlength="3" maxlength="120"></label>
+  <button type="submit">Ajouter</button>
+</form>
+<%- include('../partials/footer') %>

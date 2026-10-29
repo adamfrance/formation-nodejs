@@ -1,0 +1,26 @@
+<%- include('../partials/header', { title }) %>
+<h1><%= title %></h1>
+
+<% if (tasks.length === 0) { %>
+  <p>Aucune tâche pour le moment.</p>
+<% } %>
+
+<ul class="tasks">
+  <% tasks.forEach((task) => { %>
+    <li class="<%= task.done ? 'done' : '' %>">
+      <span><%= task.title %></span>
+      <form method="post" action="/tasks/<%= task.id %>/toggle" class="inline">
+        <button><%= task.done ? 'Rouvrir' : 'Terminer' %></button>
+      </form>
+      <% if (task.attachment) { %>
+        <a href="/tasks/files/<%= task.attachment %>">Pièce jointe</a>
+      <% } else { %>
+        <form method="post" action="/tasks/<%= task.id %>/attachment" enctype="multipart/form-data" class="inline">
+          <input type="file" name="file" accept="image/png,image/jpeg,application/pdf" required>
+          <button>Envoyer</button>
+        </form>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>
+<%- include('../partials/footer') %>

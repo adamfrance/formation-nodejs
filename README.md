@@ -17,7 +17,10 @@ Le reste arrive en fin de journée, sur des branches de ce dépôt :
 | Branche | Contenu |
 |---|---|
 | `supports` | le support de chaque journée (`formation-nodejs-jour1-apprenant.html`, puis celui du jour 2 et le support complet) et les énoncés des exercices (`enonces/`) |
-| `jour-1`, `jour-2` | TaskFlow à la fin de chaque journée |
+| `jour-1` | TaskFlow à la fin du jour 1 |
+| `jour-2-etape-nodejs` | TaskFlow au jour 2, juste avant Express : l'application 100 % Node.js (API sans framework et page web) |
+| `jour-2` | TaskFlow à la fin du jour 2, avec Express |
+| `debut-tp-2.6` | le point de départ du TP 2.6 |
 
 ## Utilisation
 
@@ -35,6 +38,16 @@ cd ~/projets/formation-nodejs
 git clone -b supports https://github.com/adamfrance/formation-nodejs.git supports
 git clone -b jour-1 https://github.com/adamfrance/formation-nodejs.git corrige-jour1
 ```
+
+Le jour 2 a deux étapes : TaskFlow 100 % Node.js, juste avant le passage à Express, puis TaskFlow fini, avec Express :
+
+```bash
+cd ~/projets/formation-nodejs
+git clone -b jour-2-etape-nodejs https://github.com/adamfrance/formation-nodejs.git corrige-jour2-nodejs
+git clone -b jour-2 https://github.com/adamfrance/formation-nodejs.git corrige-jour2
+```
+
+La version 100 % Node.js se lance avec `cd corrige-jour2-nodejs && npm install && npm start`, puis `http://localhost:3000` dans le navigateur. La version avec Express a son propre `README.md` (base PostgreSQL, fichier `.env`).
 
 Le lendemain, `git -C ~/projets/formation-nodejs/supports pull` ajoute le support suivant. Ouvrez les pages HTML dans votre navigateur (double-clic sur le fichier) : GitHub ne les affiche pas en ligne.
 
